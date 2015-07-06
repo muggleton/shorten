@@ -1,5 +1,5 @@
 suites:
     main:
-        namespace: App
-        psr4_prefix: App
+        namespace: Shorty
+        psr4_prefix: Shorty
         src_path: app

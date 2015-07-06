@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace Shorty\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
