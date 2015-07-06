@@ -22,7 +22,7 @@
     "tests"
   ],
   "dependencies": {
-    "angular": "1.4.1",
+    "angular": "~1.4.1",
     "bootstrap-sass-official": "~3.3.5"
   }
 }

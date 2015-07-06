@@ -1,0 +1,60 @@
+// Import bootstrap 
+@import "resources/assets/bower/bootstrap-sass-official/assets/stylesheets/bootstrap";
+
+$background-color: #f9f9f9;
+
+$default-primary-color: #666;
+$dark-primary-color: #333;
+$light-primary-color: #999;
+
+$primary-color: #7A9E35;
+$light-primary-color: #A4C663;
+$xlight-primary-color: #D2ED9E;
+$dark-primary-color: #557714;
+$xdark-primary-color: #344F00;
+body
+{
+	background: $background-color;
+
+	.container
+	{
+		// Set max width
+		max-width: 600px;
+
+		// Logo top
+		h1
+		{
+			color: $default-primary-color;
+			text-align: center;
+			font-size: 70px;
+			font-weight: 300;
+			margin-top: 50px;
+			margin-bottom: 20px;
+
+			.green
+			{
+				color: $light-primary-color;
+			}
+		}
+
+		// Url form
+		.url-form-container
+		{
+			margin-bottom: 40px;;
+			.url-input
+			{
+				margin-bottom: 10px;
+			}
+
+		}
+
+		.recently-shortened-container
+		{
+			h3
+			{
+				color: $default-primary-color;
+				text-align: center;
+			}
+		}
+	}
+}
