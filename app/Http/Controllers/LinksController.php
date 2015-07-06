@@ -1,5 +1,4 @@
 <?php
-
 namespace Shorty\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -7,79 +6,30 @@ use Illuminate\Http\Request;
 use Shorty\Http\Requests;
 use Shorty\Http\Controllers\Controller;
 
+// Use the base encoding class
+use Shorty\Library\Base;
+
+// Use the models
+use Shorty\Link;
+use Shorty\Location;
+
 class LinksController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return Response
-     */
-    public function index()
-    {
-        //
-    }
+	public function index()
+	{
+		return Links::all();
+	}
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return Response
-     */
-    public function create()
-    {
-        //
-    }
+	public function store(Request $request)
+	{
+		// Find the url location if it has been already used
+		// if not create a new one
+		$location = Location::firstOrCreate(['url' => $request->input('url')]);
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @return Response
-     */
-    public function store()
-    {
-        //
-    }
+		// Create a new link with the foreign location id
+		$link = Link::create(['location_id' => $location]);
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  int  $id
-     * @return Response
-     */
-    public function update($id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
+		// Return the url encoded i.d of the link
+		return Base::encode($link->id);
+	}
 }
