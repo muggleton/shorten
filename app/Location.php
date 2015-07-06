@@ -1,5 +1,4 @@
 <?php
-
 namespace Shorty;
 
 use Illuminate\Database\Eloquent\Model;
