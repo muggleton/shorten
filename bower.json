@@ -1,0 +1,28 @@
+{
+  "name": "Shorty",
+  "version": "0.0.1",
+  "homepage": "shorty.muggleton.me",
+  "authors": [
+    "David Muggleton"
+  ],
+  "description": "A simple URL shortener",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "url",
+    "shortener"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.4.1",
+    "bootstrap-sass-official": "~3.3.5"
+  }
+}
