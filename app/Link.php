@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 // Use the base encoding class
 use Shorty\Library\Base;
 
+
 class Link extends Model
 {
 
