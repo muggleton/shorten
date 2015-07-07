@@ -3,18 +3,24 @@
 
 $background-color: #f9f9f9;
 
-$default-primary-color: #666;
-$dark-primary-color: #333;
-$light-primary-color: #999;
+$default-color: #666;
+$dark-default-color: #333;
+$xlight-default-color: #eee;
+$light-default-color: #999;
 
 $primary-color: #7A9E35;
 $light-primary-color: #A4C663;
 $xlight-primary-color: #D2ED9E;
 $dark-primary-color: #557714;
 $xdark-primary-color: #344F00;
+
+$break-small: 320px;
+
+
 [ng\:cloak], [ng-cloak], .ng-cloak { display: none; }
 body
 {
+	padding-bottom: 20px;
 	// Loading bar
 	#loading-bar
 	{
@@ -39,13 +45,17 @@ body
 		// Logo top
 		h1
 		{
-			color: $default-primary-color;
+			color: $default-color;
 			text-align: center;
 			font-size: 70px;
 			font-weight: 300;
 			margin-top: 50px;
 			margin-bottom: 20px;
 
+			@media screen and (max-width: $break-small){
+				margin-top: 20px;
+				font-size: 50px;
+			}
 			.green
 			{
 				color: $light-primary-color;
@@ -55,19 +65,44 @@ body
 		// Url form
 		.url-form-container
 		{
-			margin-bottom: 40px;
-			
+
 			.url-input
 			{
 				margin-bottom: 10px;
+				font-size: 16px;
+				padding: 10px 15px;
+				height: auto;
+				border-radius: 0;
+				border: none;
+				box-shadow: 4px 3px 5px 0px rgba(0, 0, 0, 0.08);
 			}
-
+			.btn-shorten:hover,
+			.btn-shorten:focus
+			{
+				border: none;
+				box-shadow: 4px 3px 5px 0px rgba(0, 0, 0, 0.08);
+				outline: 0;
+				background: $primary-color;
+			}
+			.btn-shorten
+			{
+				border-radius: 0;
+				box-shadow: 4px 3px 5px 0px rgba(0, 0, 0, 0.08);
+				background: $light-primary-color;
+				color: white;
+				border: none;
+				font-size: 16px;
+				padding: 10px 15px;
+				font-weight: 600;
+			}
 			.error {
 				position: relative;
-				background: #f2dede;
-				border: 1px solid #ebccd1;
+				border: none;
+				box-shadow: none;
+				border-radius: 0;
 			}
-			.error:after, .error:before {
+			.error:after
+			{
 				bottom: 100%;
 				left: 50%;
 				border: solid transparent;
@@ -76,29 +111,70 @@ body
 				width: 0;
 				position: absolute;
 				pointer-events: none;
-			}
-
-			.error:after {
 				border-color: rgba(242, 222, 222, 0);
 				border-bottom-color: #f2dede;
-				border-width: 5px;
-				margin-left: -5px;
-			}
-			.error:before {
-				border-color: rgba(235, 204, 209, 0);
-				border-bottom-color: #ebccd1;
-				border-width: 6px;
-				margin-left: -6px;
+				border-width: 7px;
+				margin-left: -7px;
 			}
 
 		}
 
-		.recently-shortened-container
-		{			
+		.shortened-links
+		{
+			margin-top: 40px;
+
 			h3
 			{
-				color: $default-primary-color;
+				color: $default-color;
 				text-align: center;
+				font-weight: 400;
+			}
+
+			.shortened-link
+			{
+				background: white;
+				margin-top: 15px;
+
+				box-shadow: 4px 3px 5px 0px rgba(0, 0, 0, 0.08);
+
+				.shortened-link-short
+				{
+					background: $xlight-default-color;
+
+					color: $primary-color;
+					padding: 10px 15px;
+					font-size: 18px;
+					font-weight: 600;
+					cursor: pointer;
+				}
+
+				a.shortened-link-long
+				{
+					display: inline-block;
+					font-size: 14px;
+					padding: 10px 15px 5px;
+					color: $light-default-color;
+					font-weight: 600;
+				}
+
+				.shortened-link-timeago
+				{
+					color: $light-default-color;
+					padding: 5px 15px 10px 15px;
+					font-size: 12px;
+					display: inline-block;
+				}
+
+				.shortened-link-delete
+				{
+					color: $light-default-color;
+					padding: 5px 15px 10px 15px;
+					font-size: 12px;
+					display: inline-block;
+					float: right;
+				}
+
+
 			}
 
 		}

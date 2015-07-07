@@ -18,7 +18,7 @@ class Link extends Model
 	// Register custom attributes
 	protected $appends = ['short', 'long'];
 	// Only show short and long
-	protected $visible = ['id', 'short', 'long'];
+	protected $visible = ['id', 'short', 'long', 'created_at'];
 
 	// Relationship 
 	public function location()

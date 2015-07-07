@@ -1,8 +1,23 @@
-var app = angular.module('shortyApp', ['angular-loading-bar'], function($interpolateProvider) {
+
+
+var app = angular.module('shortyApp', ['angular-loading-bar', 'yaru22.angular-timeago'], function($interpolateProvider) {
 	$interpolateProvider.startSymbol('<%');
 	$interpolateProvider.endSymbol('%>');
 });
-
+/** Select on click module directive **/
+app.directive('selectOnClick', function ($window) {
+	return {
+		link: function (scope, element) {
+			element.on('click', function () {
+				var selection = $window.getSelection();        
+				var range = document.createRange();
+				range.selectNodeContents(element[0]);
+				selection.removeAllRanges();
+				selection.addRange(range);
+			});
+		}
+	}
+});
 
 app.controller('linksController', function($scope, $http) {
 
