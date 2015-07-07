@@ -26,7 +26,7 @@
   		<form class="url-form-container" ng-submit="shortenLink()">
   			<div class="row">
   				<div class="col-xs-12">
-  					<input type="text" class="form-control url-input" ng-model="link.url" placeholder="http://www.example.com" required/>
+  					<input type="url" class="form-control url-input" ng-model="link.url" placeholder="http://www.example.com" required/>
 
   					<div class="alert alert-danger error" ng-cloak ng-show="error">
   						<% error %>
