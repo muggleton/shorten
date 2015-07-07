@@ -5991,8 +5991,19 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
+[ng\:cloak], [ng-cloak], .ng-cloak {
+  display: none; }
+
 body {
   background: #f9f9f9; }
+  body
+#loading-bar
+.bar {
+    background: #A4C663; }
+  body
+#loading-bar
+.peg {
+    display: none; }
   body
 .container {
     max-width: 600px; }
@@ -6019,6 +6030,39 @@ h1
 .url-form-container
 .url-input {
         margin-bottom: 10px; }
+      body
+.container
+.url-form-container .error {
+        position: relative;
+        background: #f2dede;
+        border: 1px solid #ebccd1; }
+      body
+.container
+.url-form-container .error:after, body
+.container
+.url-form-container .error:before {
+        bottom: 100%;
+        left: 50%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none; }
+      body
+.container
+.url-form-container .error:after {
+        border-color: rgba(242, 222, 222, 0);
+        border-bottom-color: #f2dede;
+        border-width: 5px;
+        margin-left: -5px; }
+      body
+.container
+.url-form-container .error:before {
+        border-color: rgba(235, 204, 209, 0);
+        border-bottom-color: #ebccd1;
+        border-width: 6px;
+        margin-left: -6px; }
     body
 .container
 .recently-shortened-container

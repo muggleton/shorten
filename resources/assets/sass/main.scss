@@ -12,8 +12,23 @@ $light-primary-color: #A4C663;
 $xlight-primary-color: #D2ED9E;
 $dark-primary-color: #557714;
 $xdark-primary-color: #344F00;
+[ng\:cloak], [ng-cloak], .ng-cloak { display: none; }
 body
 {
+	// Loading bar
+	#loading-bar
+	{
+		.bar
+		{
+			background: $light-primary-color;
+		}
+		// Don't display annoying shadow
+		.peg
+		{
+			display: none;
+		}
+	}
+
 	background: $background-color;
 
 	.container
@@ -40,21 +55,52 @@ body
 		// Url form
 		.url-form-container
 		{
-			margin-bottom: 40px;;
+			margin-bottom: 40px;
+			
 			.url-input
 			{
 				margin-bottom: 10px;
 			}
 
+			.error {
+				position: relative;
+				background: #f2dede;
+				border: 1px solid #ebccd1;
+			}
+			.error:after, .error:before {
+				bottom: 100%;
+				left: 50%;
+				border: solid transparent;
+				content: " ";
+				height: 0;
+				width: 0;
+				position: absolute;
+				pointer-events: none;
+			}
+
+			.error:after {
+				border-color: rgba(242, 222, 222, 0);
+				border-bottom-color: #f2dede;
+				border-width: 5px;
+				margin-left: -5px;
+			}
+			.error:before {
+				border-color: rgba(235, 204, 209, 0);
+				border-bottom-color: #ebccd1;
+				border-width: 6px;
+				margin-left: -6px;
+			}
+
 		}
 
 		.recently-shortened-container
-		{
+		{			
 			h3
 			{
 				color: $default-primary-color;
 				text-align: center;
 			}
+
 		}
 	}
 }
