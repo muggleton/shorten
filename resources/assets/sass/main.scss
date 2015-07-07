@@ -8,13 +8,14 @@ $dark-default-color: #333;
 $xlight-default-color: #eee;
 $light-default-color: #999;
 
+$box-shadow: 4px 3px 5px 0px rgba(0, 0, 0, 0.08);
 $primary-color: #7A9E35;
 $light-primary-color: #A4C663;
 $xlight-primary-color: #D2ED9E;
 $dark-primary-color: #557714;
 $xdark-primary-color: #344F00;
 
-$break-small: 320px;
+$break-small: 360px;
 
 
 [ng\:cloak], [ng-cloak], .ng-cloak { display: none; }
@@ -74,20 +75,20 @@ body
 				height: auto;
 				border-radius: 0;
 				border: none;
-				box-shadow: 4px 3px 5px 0px rgba(0, 0, 0, 0.08);
+				box-shadow: $box-shadow;
 			}
 			.btn-shorten:hover,
 			.btn-shorten:focus
 			{
 				border: none;
-				box-shadow: 4px 3px 5px 0px rgba(0, 0, 0, 0.08);
+				box-shadow: $box-shadow;
 				outline: 0;
 				background: $primary-color;
 			}
 			.btn-shorten
 			{
 				border-radius: 0;
-				box-shadow: 4px 3px 5px 0px rgba(0, 0, 0, 0.08);
+				box-shadow: $box-shadow;
 				background: $light-primary-color;
 				color: white;
 				border: none;
@@ -135,7 +136,7 @@ body
 				background: white;
 				margin-top: 15px;
 
-				box-shadow: 4px 3px 5px 0px rgba(0, 0, 0, 0.08);
+				box-shadow: $box-shadow;
 
 				.shortened-link-short
 				{
