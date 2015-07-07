@@ -2,3 +2,7 @@
 /node_modules
 Homestead.yaml
 .env
+Capfile
+/config/deploy
+/config/deploy.rb
+/.capistrano
