@@ -5,7 +5,8 @@ var paths = {
 	'jquery': './resources/assets/bower/jquery/',
 	'bootstrap': './resources/assets/bower/bootstrap-sass-official/assets/',
 	'angular': './resources/assets/bower/angular/',
-	'angular_loading_bar': './resources/assets/bower/angular-loading-bar/src/'
+	'angular_loading_bar': './resources/assets/bower/angular-loading-bar/src/',
+	'angular_timeago': './resources/assets/bower/angular-timeago/src/'
 }
 
 elixir(function(mix) {
@@ -15,6 +16,7 @@ elixir(function(mix) {
 	.copy(paths.jquery + 'dist/jquery.min.js', 'public/assets/js/vendor/jquery.min.js')
 	.copy(paths.bootstrap +  'javascripts/bootstrap.min.js', 'public/assets/js/vendor/bootstrap.min.js')
 	// Combine angulr and angular related scripts
-	.scripts(['angular/angular.js', 'angular-loading-bar/src/loading-bar.js'], 'public/assets/js/vendor/angular.js' ,'resources/assets/bower')
+	.scripts(['angular/angular.js', 'angular-loading-bar/src/loading-bar.js', 'angular-timeago/src/timeAgo.js'], 'public/assets/js/vendor/angular.js' ,'resources/assets/bower')
 	.scripts(['main.js'], 'public/assets/js/main.js')
+	
 });
