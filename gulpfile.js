@@ -1,5 +1,5 @@
 var elixir = require('laravel-elixir');
-
+var autoprefixer = require('gulp-autoprefixer');
 
 var paths = {
 	'jquery': './resources/assets/bower/jquery/',
